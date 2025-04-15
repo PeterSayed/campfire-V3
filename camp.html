@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="تخييم, مغامرات, طبيعة, سياحة, سفر">
+  <meta property="og:title" content="كامب فاير - تجربة تخييم مميزة">
+  <meta property="og:description" content="استمتع بأفضل تجارب التخييم في أحضان الطبيعة">
+  
+  <!-- Preload important resources -->
+  <link rel="preload" href="css/bootstrap.css" as="style">
+  <link rel="preload" href="css/style.css" as="style">
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" as="style">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+
+  
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+  <title>معسكراتنا</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/Favicon.png" type="image/x-icon">
+</head>
+
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light px-lg-2 py-lg-2 shadow-sm sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand me-5" href="index.html" aria-label="الصفحة الرئيسية كامب فاير">
+      <img src="images/logo.png" alt="شعار كامب فاير" width="120" height="40">
+    </a>
+    <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+            aria-expanded="false" aria-label="تبديل التنقل">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active me-2" aria-current="page" href="index.html">الرئيسية</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link me-2" href="about.html">من نحن</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link me-2" href="camp.html">معسكراتنا</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link me-2" href="Contact-Us.html">اتصل بنا</a>
+        </li>
+      </ul>
+
+      <div class="d-flex">
+        <a href="signin.html" class="btn btn-outline-dark shadow-none me-lg-3 me-2">
+          تسجيل الدخول
+        </a>
+        <a href="signup.html" class="btn btn-dark shadow-none">
+          إنشاء حساب
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+  <!-- Camps Section -->
+  <section class="camps-section py-5">
+    <div class="container">
+      <h2 class="section-title">معسكراتنا</h2>
+      <p class="section-subtitle">اختر تجربة التخييم المثالية لك</p>
+      <div class="row">
+        <div class="row mb-4">
+          <div class="col-md-6">
+            <input type="text" id="campSearch" class="form-control" placeholder="ابحث عن معسكرات...">
+          </div>
+          <div class="col-md-6">
+            <select id="campFilter" class="form-select">
+              <option value="all">جميع الأنواع</option>
+              <option value="tent">خيام</option>
+              <option value="cabin">كابينات</option>
+              <option value="luxury">خيام فاخرة</option>
+              <option value="shared">مساكن مشتركة</option>
+            </select>
+          </div>
+        </div>
+  <!-- Camps 1 -->
+  <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card camp-card h-100">
+            <img src="images/1.png" class="camp-img" alt="معسكر المنظر الجبلي">
+            <div class="card-body">
+              <h5 class="card-title">دهب</h5>
+              <h6 class="text-primary mb-3">1200 جنيه لكل ليلة</h6>
+              
+              <div class="mb-3">
+                <h6>أنواع الإقامة</h6>
+                <span class="badge amenity-badge">خيمة خاصة</span>
+                <span class="badge amenity-badge">كابينة خشبية</span>
+                <span class="badge amenity-badge">مسكن مشترك</span>
+              </div>
+              
+              <div class="mb-3">
+                <h6>الخدمات</h6>
+                <span class="badge amenity-badge">مطعم في الموقع</span>
+                <span class="badge amenity-badge">منطقة شواء</span>
+                <span class="badge amenity-badge">واي فاي مجاني</span>
+              </div>
+              
+              <div class="mb-3">
+                <h6>التقييم</h6>
+                <div class="rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+              </div>
+              
+              <a href="booking.html?camp=1" class="btn btn-primary w-100">احجز الآن</a>
+            </div>
+          </div>
+        </div>
+
+  <!-- Camps 2 -->
+  <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card camp-card h-100">
+            <img src="images/2.png" class="camp-img" alt="معسكر الغابات">
+            <div class="card-body">
+              <h5 class="card-title">محمية وادي دجلة</h5>
+              <h6 class="text-primary mb-3">1500 جنيه لكل ليلة</h6>
+              
+              <div class="mb-3">
+                <h6>أنواع الإقامة</h6>
+                <span class="badge amenity-badge">كابينة خشبية</span>
+                <span class="badge amenity-badge">مسكن مشترك</span>
+              </div>
+              
+              <div class="mb-3">
+                <h6>الخدمات</h6>
+                <span class="badge amenity-badge">منطقة شواء</span>
+                <span class="badge amenity-badge">واي فاي مجاني</span>
+                <span class="badge amenity-badge">مسارات مشي</span>
+              </div>
+              
+              <div class="mb-3">
+                <h6>التقييم</h6>
+                <div class="rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+              </div>
+              
+              <a href="booking.html?camp=2" class="btn btn-primary w-100">احجز الآن</a>
+            </div>
+          </div>
+        </div>
+
+  <!-- Camps 3 -->
+  <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card camp-card h-100">
+            <img src="images/3.png" class="camp-img" alt="معسكر البحيرة">
+            <div class="card-body">
+              <h5 class="card-title">وادي الريان</h5>
+              <h6 class="text-primary mb-3">1800 جنيه لكل ليلة</h6>
+              
+              <div class="mb-3">
+                <h6>أنواع الإقامة</h6>
+                <span class="badge amenity-badge">خيمة خاصة</span>
+                <span class="badge amenity-badge">خيمة فاخرة</span>
+              </div>
+              
+              <div class="mb-3">
+                <h6>الخدمات</h6>
+                <span class="badge amenity-badge">مطعم في الموقع</span>
+                <span class="badge amenity-badge">أدوات صيد</span>
+                <span class="badge amenity-badge">تأجير قوارب</span>
+              </div>
+              
+              <div class="mb-3">
+                <h6>التقييم</h6>
+                <div class="rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+              </div>
+              
+              <a href="booking.html?camp=3" class="btn btn-primary w-100">احجز الآن</a>
+            </div>
+          </div>
+        </div>
+
+  <!-- Camps 4 -->
+  <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card camp-card h-100">
+            <img src="images/4.png" class="camp-img" alt="معسكر البحيرة">
+            <div class="card-body">
+              <h5 class="card-title">نويبع</h5>
+              <h6 class="text-primary mb-3">1800 جنيه لكل ليلة</h6>
+              
+              <div class="mb-3">
+                <h6>أنواع الإقامة</h6>
+                <span class="badge amenity-badge">خيمة خاصة</span>
+                <span class="badge amenity-badge">خيمة فاخرة</span>
+              </div>
+              
+              <div class="mb-3">
+                <h6>الخدمات</h6>
+                <span class="badge amenity-badge">مطعم في الموقع</span>
+                <span class="badge amenity-badge">أدوات صيد</span>
+                <span class="badge amenity-badge">تأجير قوارب</span>
+              </div>
+              
+              <div class="mb-3">
+                <h6>التقييم</h6>
+                <div class="rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+              </div>
+              
+              <a href="booking.html?camp=3" class="btn btn-primary w-100">احجز الآن</a>
+            </div>
+          </div>
+        </div>
+
+  <!-- Camps 5 -->
+  <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card camp-card h-100">
+            <img src="images/5.png" class="camp-img" alt="معسكر البحيرة">
+            <div class="card-body">
+              <h5 class="card-title">طابا، مصر</h5>
+              <h6 class="text-primary mb-3">1800 جنيه لكل ليلة</h6>
+              
+              <div class="mb-3">
+                <h6>أنواع الإقامة</h6>
+                <span class="badge amenity-badge">خيمة خاصة</span>
+                <span class="badge amenity-badge">خيمة فاخرة</span>
+              </div>
+              
+              <div class="mb-3">
+                <h6>الخدمات</h6>
+                <span class="badge amenity-badge">مطعم في الموقع</span>
+                <span class="badge amenity-badge">أدوات صيد</span>
+                <span class="badge amenity-badge">تأجير قوارب</span>
+              </div>
+              
+              <div class="mb-3">
+                <h6>التقييم</h6>
+                <div class="rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+              </div>
+              
+              <a href="booking.html?camp=3" class="btn btn-primary w-100">احجز الآن</a>
+            </div>
+          </div>
+        </div>
+
+  <!-- Camps 6 -->
+  <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card camp-card h-100">
+            <img src="images/6.png" class="camp-img" alt="معسكر البحيرة">
+            <div class="card-body">
+              <h5 class="card-title">سانت كاترين، مصر</h5>
+              <h6 class="text-primary mb-3">1800 جنيه لكل ليلة</h6>
+              
+              <div class="mb-3">
+                <h6>أنواع الإقامة</h6>
+                <span class="badge amenity-badge">خيمة خاصة</span>
+                <span class="badge amenity-badge">خيمة فاخرة</span>
+              </div>
+              
+              <div class="mb-3">
+                <h6>الخدمات</h6>
+                <span class="badge amenity-badge">مطعم في الموقع</span>
+                <span class="badge amenity-badge">أدوات صيد</span>
+                <span class="badge amenity-badge">تأجير قوارب</span>
+              </div>
+              
+              <div class="mb-3">
+                <h6>التقييم</h6>
+                <div class="rating">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+              </div>
+              
+              <a href="booking.html?camp=3" class="btn btn-primary w-100">احجز الآن</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="footer-brand">
+          <img src="images/logo.png" alt="شعار كامب فاير" width="150">
+        </div>
+        <p class="footer-about">
+          تقدم كامب فاير تجارب تخييم فريدة مع إقامة مريحة في أجمل المناطق الطبيعية.
+        </p>
+        <div class="social-links">
+          <a href="#" aria-label="فيسبوك"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="إنستجرام"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="تويتر"><i class="bi bi-twitter"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-4">
+        <h4>روابط سريعة</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="about.html">من نحن</a></li>
+          <li><a href="camp.html">معسكراتنا</a></li>
+          <li><a href="Contact-Us.html">اتصل بنا</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <h4>الدعم</h4>
+        <ul class="footer-links">
+          <li><a href="faq.html">الأسئلة الشائعة</a></li>
+          <li><a href="terms.html">الشروط والأحكام</a></li>
+          <li><a href="privacy.html">سياسة الخصوصية</a></li>
+          <li><a href="cancellation.html">سياسة الإلغاء</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <h4>النشرة البريدية</h4>
+        <p>اشترك للحصول على عروض خاصة وتحديثات</p>
+        <form class="newsletter-form">
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="بريدك الإلكتروني" required>
+            <button class="btn btn-primary" type="submit">اشتراك</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <hr>
+    <div class="footer-bottom">
+      <p>&copy; 2025 كامب فاير. جميع الحقوق محفوظة.</p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- JavaScript Files -->
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

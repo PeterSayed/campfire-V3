@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - الإدمن</title>
+    <!-- Bootstrap RTL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard">
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <div class="sidebar bg-dark text-white">
+            <div class="sidebar-header text-center py-4">
+                <img src="images/icons8-person-80.png" alt="Admin" class="rounded-circle mb-2">
+                <h5>مدير النظام</h5>
+                <p class="text-muted">Admin</p>
+            </div>
+            <ul class="nav flex-column">
+                <li class="nav-item active" data-target="dashboard">
+                    <a class="nav-link">
+                        <i class="fas fa-tachometer-alt me-2"></i> الرئيسية
+                    </a>
+                </li>
+                <li class="nav-item" data-target="camps">
+                    <a class="nav-link">
+                        <i class="fas fa-campground me-2"></i> إدارة الكامبات
+                    </a>
+                </li>
+                <li class="nav-item" data-target="bookings">
+                    <a class="nav-link">
+                        <i class="fas fa-calendar-check me-2"></i> الحجوزات
+                    </a>
+                </li>
+                <li class="nav-item" data-target="reviews">
+                    <a class="nav-link">
+                        <i class="fas fa-star me-2"></i> التقييمات
+                    </a>
+                </li>
+                <li class="nav-item" data-target="messages">
+                    <a class="nav-link">
+                        <i class="fas fa-envelope me-2"></i> الرسائل
+                    </a>
+                </li>
+                <li class="nav-item" data-target="users">
+                    <a class="nav-link">
+                        <i class="fas fa-users me-2"></i> إدارة المستخدمين
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="logout">
+                        <i class="fas fa-sign-out-alt me-2"></i> تسجيل الخروج
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+    <div class="main-content">
+            <!-- Top Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <button class="btn btn-link" id="sidebarToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="d-flex align-items-center">
+                        <div class="dropdown">
+                            <button class="btn btn-link dropdown-toggle" type="button" id="notificationsDropdown" data-bs-toggle="dropdown">
+                                <i class="fas fa-bell"></i>
+                                <span class="badge bg-danger">3</span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">حجز جديد #1254</a></li>
+                                <li><a class="dropdown-item" href="#">تقييم جديد من أحمد</a></li>
+                                <li><a class="dropdown-item" href="#">رسالة جديدة</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown ms-3">
+                            <button class="btn btn-link dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown">
+                                <img src="images/icons8-person-80.png" alt="User" class="rounded-circle">
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">الملف الشخصي</a></li>
+                                <li><a class="dropdown-item" href="#">الإعدادات</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#" id="logout2">تسجيل الخروج</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Dashboard Content -->
+            <div class="content p-4" id="contentArea">
+                <!-- Dynamic content will be loaded here -->
+                <div id="dashboardContent">
+                    <h2 class="mb-4">لوحة التحكم</h2>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card bg-primary text-white mb-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">عدد الكامبات</h5>
+                                    <h2 class="mb-0">24</h2>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" class="text-white">عرض الكل <i class="fas fa-arrow-left"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card bg-success text-white mb-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">الحجوزات النشطة</h5>
+                                    <h2 class="mb-0">56</h2>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" class="text-white">عرض الكل <i class="fas fa-arrow-left"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card bg-warning text-white mb-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">المستخدمين</h5>
+                                    <h2 class="mb-0">128</h2>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" class="text-white">عرض الكل <i class="fas fa-arrow-left"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card bg-danger text-white mb-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">التقييمات</h5>
+                                    <h2 class="mb-0">42</h2>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" class="text-white">عرض الكل <i class="fas fa-arrow-left"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h5>آخر الحجوزات</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>رقم الحجز</th>
+                                                    <th>المستخدم</th>
+                                                    <th>التاريخ</th>
+                                                    <th>الحالة</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>#1254</td>
+                                                    <td>أحمد محمد</td>
+                                                    <td>2023-06-15</td>
+                                                    <td><span class="badge bg-success">مؤكد</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>#1253</td>
+                                                    <td>سارة علي</td>
+                                                    <td>2023-06-14</td>
+                                                    <td><span class="badge bg-warning">قيد الانتظار</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>#1252</td>
+                                                    <td>محمد خالد</td>
+                                                    <td>2023-06-13</td>
+                                                    <td><span class="badge bg-success">مؤكد</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <h5>آخر التقييمات</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex mb-3">
+                                        <img src="images/icons8-person-80.png" alt="User" class="rounded-circle me-3">
+                                        <div>
+                                            <h6>أحمد محمد</h6>
+                                            <div class="text-warning">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half-alt"></i>
+                                            </div>
+                                            <p class="mb-0">كامب رائع والخدمة ممتازة</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex mb-3">
+                                        <img src="images/icons8-person-80.png" alt="User" class="rounded-circle me-3">
+                                        <div>
+                                            <h6>سارة علي</h6>
+                                            <div class="text-warning">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </div>
+                                            <p class="mb-0">تجربة جميلة وسأكررها بالتأكيد</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Camps Management Content (Hidden by default) -->
+                <div id="campsContent" class="d-none">
+                    <h2 class="mb-4">إدارة الكامبات</h2>
+                    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addCampModal">
+                        <i class="fas fa-plus me-2"></i>إضافة كامب جديد
+                    </button>
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h5 class="mb-0">قائمة الكامبات</h5>
+                            <div class="search-box">
+                                <input type="text" class="form-control" placeholder="بحث...">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>الصورة</th>
+                                            <th>اسم الكامب</th>
+                                            <th>الموقع</th>
+                                            <th>السعر</th>
+                                            <th>السعة</th>
+                                            <th>الحالة</th>
+                                            <th>الإجراءات</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td><img src="https://via.placeholder.com/50" alt="Camp" class="img-thumbnail"></td>
+                                            <td>كامب الواحة</td>
+                                            <td>العين السخنة</td>
+                                            <td>500 ج.م</td>
+                                            <td>6 أشخاص</td>
+                                            <td><span class="badge bg-success">نشط</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button>
+                                                <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td><img src="https://via.placeholder.com/50" alt="Camp" class="img-thumbnail"></td>
+                                            <td>كامب النجوم</td>
+                                            <td>مرسى علم</td>
+                                            <td>750 ج.م</td>
+                                            <td>4 أشخاص</td>
+                                            <td><span class="badge bg-success">نشط</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button>
+                                                <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1">السابق</a>
+                                    </li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">التالي</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other sections will be similar with their own content -->
+                <!-- Bookings, Reviews, Messages, Users sections would go here -->
+            </div>
+    </div>
+    </div>
+
+    <!-- Add Camp Modal -->
+    <div class="modal fade" id="addCampModal" tabindex="-1" aria-labelledby="addCampModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addCampModalLabel">إضافة كامب جديد</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addCampForm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="campName" class="form-label">اسم الكامب</label>
+                                    <input type="text" class="form-control" id="campName" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="campLocation" class="form-label">الموقع</label>
+                                    <input type="text" class="form-control" id="campLocation" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="campPrice" class="form-label">السعر</label>
+                                    <input type="number" class="form-control" id="campPrice" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="campCapacity" class="form-label">السعة</label>
+                                    <input type="number" class="form-control" id="campCapacity" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="campDescription" class="form-label">الوصف</label>
+                                    <textarea class="form-control" id="campDescription" rows="3"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="campImages" class="form-label">صور الكامب</label>
+                                    <input type="file" class="form-control" id="campImages" multiple>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                    <button type="button" class="btn btn-primary">حفظ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

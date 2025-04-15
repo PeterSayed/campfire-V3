@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - المستخدم</title>
+    <!-- Bootstrap RTL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard">
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <div class="sidebar bg-primary text-white">
+            <div class="sidebar-header text-center py-4">
+                <img src="images/icons8-person-80.png" alt="User" class="rounded-circle mb-2">
+                <h5>أحمد محمد</h5>
+                <p class="text-light">مستخدم</p>
+            </div>
+            <ul class="nav flex-column">
+                <li class="nav-item active" data-target="dashboard">
+                    <a class="nav-link">
+                        <i class="fas fa-tachometer-alt me-2"></i> الرئيسية
+                    </a>
+                </li>
+                <li class="nav-item" data-target="bookings">
+                    <a class="nav-link">
+                        <i class="fas fa-calendar-check me-2"></i> حجوزاتي
+                    </a>
+                </li>
+                <li class="nav-item" data-target="reviews">
+                    <a class="nav-link">
+                        <i class="fas fa-star me-2"></i> تقييماتي
+                    </a>
+                </li>
+                <li class="nav-item" data-target="messages">
+                    <a class="nav-link">
+                        <i class="fas fa-envelope me-2"></i> رسائلي
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="logout">
+                        <i class="fas fa-sign-out-alt me-2"></i> تسجيل الخروج
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Top Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <button class="btn btn-link" id="sidebarToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="d-flex align-items-center">
+                        <div class="dropdown">
+                            <button class="btn btn-link dropdown-toggle" type="button" id="notificationsDropdown" data-bs-toggle="dropdown">
+                                <i class="fas fa-bell"></i>
+                                <span class="badge bg-danger">2</span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">تأكيد حجز #1254</a></li>
+                                <li><a class="dropdown-item" href="#">رد على رسالتك</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown ms-3">
+                            <button class="btn btn-link dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown">
+                                <img src="images/icons8-person-80.png" alt="User" class="rounded-circle">
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">الملف الشخصي</a></li>
+                                <li><a class="dropdown-item" href="#">الإعدادات</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#" id="logout2">تسجيل الخروج</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Dashboard Content -->
+            <div class="content p-4" id="contentArea">
+                <!-- Dynamic content will be loaded here -->
+                <div id="dashboardContent">
+                    <h2 class="mb-4">مرحباً بك، أحمد</h2>
+                    
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card bg-primary text-white mb-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">الحجوزات النشطة</h5>
+                                    <h2 class="mb-0">3</h2>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" class="text-white">عرض الكل <i class="fas fa-arrow-left"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card bg-success text-white mb-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">الحجوزات السابقة</h5>
+                                    <h2 class="mb-0">5</h2>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" class="text-white">عرض الكل <i class="fas fa-arrow-left"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card bg-warning text-white mb-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">التقييمات</h5>
+                                    <h2 class="mb-0">2</h2>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="#" class="text-white">عرض الكل <i class="fas fa-arrow-left"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5>حجوزاتي القادمة</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>رقم الحجز</th>
+                                            <th>الكامب</th>
+                                            <th>التاريخ</th>
+                                            <th>الحالة</th>
+                                            <th>الإجراءات</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>#1254</td>
+                                            <td>كامب الواحة</td>
+                                            <td>2023-06-20</td>
+                                            <td><span class="badge bg-success">مؤكد</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-info">التفاصيل</button>
+                                                <button class="btn btn-sm btn-danger">إلغاء</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>#1255</td>
+                                            <td>كامب النجوم</td>
+                                            <td>2023-07-05</td>
+                                            <td><span class="badge bg-warning">قيد الانتظار</span></td>
+                                            <td>
+                                                <button class="btn btn-sm btn-info">التفاصيل</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other sections for user dashboard -->
+                <div id="bookingsContent" class="d-none">
+                    <!-- User bookings content -->
+                </div>
+
+                <div id="reviewsContent" class="d-none">
+                    <!-- User reviews content -->
+                </div>
+
+                <div id="messagesContent" class="d-none">
+                    <!-- User messages content -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
